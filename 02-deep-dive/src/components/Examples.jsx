@@ -28,7 +28,7 @@ export default function Examples() {
   return (
     <Section title="Examples" id="examples">
       <Tabs
-        buttonsContainer="menu" //string for builtins elements,  {<custom_component>} for the custom
+        // buttonsContainer="menu" //string for builtins elements,  {<custom_component>} for the custom
         buttons={
           <>
             <TabButton
