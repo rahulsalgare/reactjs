@@ -5,6 +5,7 @@ import GameBoard from "./components/GameBoard";
 import { use } from "react";
 
 function App() {
+  const [gameTurns, setGameTurns] = useState([]);
   const [activePlayer, setActivePlayer] = useState("X");
 
   function handleSelectSquare() {
