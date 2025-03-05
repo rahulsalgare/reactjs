@@ -33,8 +33,8 @@ export default function AuthInputs() {
   return (
     <div id="auth-inputs">
       <Controls>
-        <CustomInput $invalid={emailNotValid} label="Email" />
-        <CustomInput $invalid={passwordNotValid} label="Password" />
+        <CustomInput invalid={emailNotValid} label="Email" />
+        <CustomInput invalid={passwordNotValid} label="Password" />
       </Controls>
       <div className="actions">
         <button type="button" className="text-button">
