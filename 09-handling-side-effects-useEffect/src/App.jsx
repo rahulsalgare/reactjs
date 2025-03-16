@@ -6,9 +6,11 @@ import Modal from "./components/Modal.jsx";
 import DeleteConfirmation from "./components/DeleteConfirmation.jsx";
 import logoImg from "./assets/logo.png";
 import { sortPlacesByDistance } from "./loc.js";
+
 function App() {
   const modal = useRef();
   const selectedPlace = useRef();
+  const [availablePlaces, setAvailablePlaces] = useState(AVAILABLE_PLACES);
   const [pickedPlaces, setPickedPlaces] = useState([]);
 
   navigator.geolocation.getCurrentPosition((position) => {
@@ -17,7 +19,7 @@ function App() {
       position.coords.latitude,
       position.coords.longitude
     );
-    setPickedPlaces(sortedPlaces);
+    setAvailablePlaces(sortedPlaces);
   });
 
   function handleStartRemovePlace(id) {
